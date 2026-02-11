@@ -7,8 +7,6 @@ assignees: ''
 
 ---
 
-# Roadblock: [Brief Title]
-
 ## The Goal
 
 _What scientific question or computational task are you trying to resolve?_
