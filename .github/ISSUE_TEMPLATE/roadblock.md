@@ -1,3 +1,12 @@
+---
+name: Roadblock
+about: Describe something that is keeping you from making progress.
+title: ''
+labels: ''
+assignees: ''
+
+---
+
 # Roadblock: [Brief Title]
 
 ## The Goal
