@@ -1,0 +1,4 @@
+public
+.mypy_cache
+.pixi
+.DS_Store
