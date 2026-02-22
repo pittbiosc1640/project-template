@@ -29,6 +29,7 @@ exclude = [
     "site-packages",
     "venv",
     ".pixi"
+    "__init__.py"
 ]
 
 [lint]
