@@ -3,6 +3,10 @@
 !.pixi/config.toml
 lab/_version.py
 
+# Ignore pipeline data archives and manifests
+*.tar.gz
+checksums.json
+
 # Created by https://www.toptal.com/developers/gitignore/api/osx,python,pycharm,windows,visualstudio,visualstudiocode,zsh,jetbrains,jupyternotebooks
 # Edit at https://www.toptal.com/developers/gitignore?templates=osx,python,pycharm,windows,visualstudio,visualstudiocode,zsh,jetbrains,jupyternotebooks
 

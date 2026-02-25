@@ -33,6 +33,8 @@ setuptools = ">=82.0.0,<83"
 setuptools-scm = ">=9.2.2,<10"
 wheel = ">=0.46.3,<0.47"
 pytest = ">=9.0.2,<10"
+gh = { version = ">=2.87.2,<3", channel = "conda-forge" }
+bump-my-version = ">=1.2.7,<2"
 
 [feature.dev.tasks]
 format = { cmd = ["ruff", "check", "--select", "I", "--fix", "&&", "ruff", "format", "--config", ".ruff.toml", "./"] }
@@ -43,3 +45,10 @@ tests = { cmd = [
     ".pytest.ini",
     "--failed-first",
 ]}
+check-data = "python -u scripts/check.py"
+fetch-data = "python -u scripts/fetch.py"
+compress-data = "python -u scripts/compress.py"
+publish-data = "python -u scripts/publish.py"
+bump = { cmd = ["bump-my-version", "bump", "patch"] }
+release = { depends-on = ["compress-data", "bump"], cmd = ["git", "push", "--follow-tags", "&&", "pixi", "run", "publish-data"] }
+
