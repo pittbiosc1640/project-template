@@ -8,7 +8,7 @@ authors = [
 channels = ["conda-forge", "bioconda", "nvidia", "pytorch"]
 name = "biosc1640-project"
 platforms = ["linux-64", "osx-64", "osx-arm64"]
-version = "26.2.10"
+version = "26.2.28"
 
 [pypi-dependencies]
 lab = { path = ".", editable = true }
