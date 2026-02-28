@@ -29,6 +29,6 @@ def _hash_file(file_path: Path, hasher):
 
 
 def load_manifest() -> dict:
-    manifest_path = Path(__file__).parent / "manifest.json"
+    manifest_path = Path(__file__).parent.parent / "manifest.json"
     with open(manifest_path, "r") as f:
         return json.load(f)
