@@ -28,11 +28,10 @@ You can pass the specific archive name (exactly as it is defined in the `"assets
 pixi run fetch-data <archive_name.tar.gz>
 ```
 
-For example, if the project manifest contains an asset named `structure-predictions-boltz.tar.gz`, you would run:
+For example, if the project manifest contains an asset named `big-data.tar.gz`, you would run:
 
 ```bash
-pixi run fetch-data structure-predictions-boltz.tar.gz
-
+pixi run fetch-data big-data.tar.gz
 ```
 
 You can also chain multiple specific archives together by separating them with a space.
@@ -47,15 +46,15 @@ Whether you are just cutting a new version of the code or publishing massive new
 
 Before cutting a release, make sure your working directory is clean and your data assets are configured correctly.
 If your project includes data that needs to be distributed or should not be committed to git, define it in `manifest.json` and make sure the data is ignored in `.gitignore`.
-Ensure the `"repo"` is set to your target GitHub repository (e.g., `"pittbiosc1640/your-repo-name"`).
+Ensure the `"repo"` is set to your target GitHub repository (e.g., `"pittbiosc1640/project-template"`).
 Then, provide a mapping of the desired output archive name to the local directory in the `"assets"` dictionary.
 Here is an example.
 
 ```json
 {
-    "repo": "pittbiosc1640/mako-vs-project",
+    "repo": "pittbiosc1640/project-template",
     "assets": {
-        "structure-predictions-boltz.tar.gz": "data/001-structure-predictions/boltz/results"
+        "big-data.tar.gz": "data/001-example/results"
     }
 }
 ```
