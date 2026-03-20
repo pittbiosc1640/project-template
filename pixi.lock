@@ -632,8 +632,8 @@ packages:
   timestamp: 1760831448842
 - pypi: ./
   name: lab
-  version: 0.1.dev7+g5fac94b8c.d20260222024729
-  sha256: eda241b4f37a2de05741de457a509e3b1fbfda7f2a96ed52c5b0f28f5befc562
+  version: 26.3.8.dev0+g7d981c80e.d20260320013431
+  sha256: b8fe39fd4df1e569721d85eac632a0033bf8ad62bf5ef5dab7b81b4365678b27
 - conda: https://conda.anaconda.org/conda-forge/linux-64/ld_impl_linux-64-2.45.1-default_hbd61a6d_101.conda
   sha256: 565941ac1f8b0d2f2e8f02827cbca648f4d18cd461afc31f15604cd291b5c5f3
   md5: 12bd9a3f089ee6c9266a37dab82afabd

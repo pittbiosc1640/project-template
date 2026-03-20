@@ -1,9 +1,6 @@
-# For more information, please see https://pixi.prefix.dev/dev/reference/pixi_manifest/
-
 [workspace]
 authors = [
-    # TODO: Add to group members before Alex
-    "Alex Maldonado <alex.maldonado@pitt.edu>"
+    "Alex Maldonado <alex.maldonado@pitt.edu>",
 ]
 channels = ["conda-forge", "bioconda", "nvidia", "pytorch"]
 name = "biosc1640-project"
@@ -35,6 +32,8 @@ wheel = ">=0.46.3,<0.47"
 pytest = ">=9.0.2,<10"
 gh = { version = ">=2.87.2,<3", channel = "conda-forge" }
 bump-my-version = ">=1.2.7,<2"
+click = ">=8.3.1,<9"
+rich = ">=14.3.3,<15"
 
 [feature.dev.tasks]
 format = { cmd = ["ruff", "check", "--select", "I", "--fix", "&&", "ruff", "format", "--config", ".ruff.toml", "./"] }
@@ -45,10 +44,9 @@ tests = { cmd = [
     ".pytest.ini",
     "--failed-first",
 ]}
-check-data = "python -u scripts/check.py"
-fetch-data = "python -u scripts/fetch.py"
-compress-data = "python -u scripts/compress.py"
-publish-data = "python -u scripts/publish.py"
+check-data = "python -u scripts/data.py check"
+fetch-data = "python -u scripts/data.py fetch"
+compress-data = "python -u scripts/data.py compress"
+publish-data = "python -u scripts/data.py publish"
 bump = { cmd = ["bump-my-version", "bump", "patch"] }
 release = { depends-on = ["compress-data", "bump"], cmd = ["git", "push", "--follow-tags", "&&", "pixi", "run", "publish-data"] }
-

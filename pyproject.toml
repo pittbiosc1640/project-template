@@ -1,8 +1,7 @@
 [project]
 name = "lab"
 authors = [
-    # TODO: Add to group members before Alex
-    {name = "Alex Maldonado", email = "alex.maldonado@pitt.edu"}
+    {name = "Alex Maldonado", email = "alex.maldonado@pitt.edu"},
 ]
 maintainers = [
     {name = "Alex Maldonado", email = "alex.maldonado@pitt.edu"}
