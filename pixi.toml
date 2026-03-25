@@ -37,7 +37,8 @@ click = ">=8.3.1,<9"
 rich = ">=14.3.3,<15"
 
 [feature.dev.tasks]
-format = { cmd = ["ruff", "check", "--select", "I", "--fix", "&&", "ruff", "format", "--config", ".ruff.toml", "./"] }
+lint = { cmd = ["ruff", "check", "--fix", "--config", ".ruff.toml", "./"] }
+format = { depends-on = ["lint"], cmd = ["ruff", "check", "--select", "I", "--fix", "&&", "ruff", "format", "--config", ".ruff.toml", "./"] }
 tests = { cmd = [
     "PYTHONPATH=.",
     "pytest",
