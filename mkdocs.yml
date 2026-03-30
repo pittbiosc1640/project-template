@@ -72,7 +72,7 @@ plugins:
             parameter_headings: true
             show_symbol_type_heading: true
             show_symbol_type_toc: true
-  - awesome-pages:
+  - awesome-nav:
         collapse_single_pages: true
         strict: false
         order: asc
