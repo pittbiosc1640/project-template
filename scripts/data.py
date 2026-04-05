@@ -15,6 +15,8 @@ Usage:
     python data.py publish
 """
 
+from __future__ import annotations
+
 import hashlib
 import json
 import subprocess
